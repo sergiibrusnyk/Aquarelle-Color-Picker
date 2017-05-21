@@ -7,6 +7,7 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  // border: 1px solid black;
 }
 $main-color: rgba(255, 255, 255, 0.3);
 $second-color: rgba(0, 0, 0, 0.3);
@@ -63,7 +64,8 @@ body {
 }
 
 .pickerPannel {
-  width: 35%;
+  width: 50%;
+  padding-right: 130px;
 }
 
 .infoBtn {
@@ -178,37 +180,57 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(124deg, rgb(183, 242, 174), rgb(182, 196, 219), rgb(211, 226, 181), rgb(232, 225, 127), rgb(237, 196, 217));
   }
 
   .siteExample {
     width: 100%;
+    height: 80%;
+    padding: 20px 0;
   }
 
   .infoBtn {
-    display: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+
+  .infoWindowText {
+    width: 90%;
   }
 
   .pickerPannel {
     width: 100%;
+    padding-top: 0;
+    padding-right: 0;
   }
 
   .segments {
-    display: flex;
-    flex-direction: row;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .colorSegment {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 10px;
 
-    span {
-      display: none;
+    .color {
+      width: 80px;
+      height: 80px;
     }
+
+    .show-color {
+      width: 115px;
+    }
+  }
+
+  .clearBtn {
+    margin-top: 10px;
   }
 }
