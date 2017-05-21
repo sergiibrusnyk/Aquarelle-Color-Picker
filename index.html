@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="infoWindow">
+
+    <div class="infoWindowText">
+      <div class="close-circle">
+        <span class="close">x</span>
+      </div>
+      <p>Aquarelle is a simple color picker that will show you which colors are a perfect match. You can use it to choose colors for your website (or to match your outfit items :) <br> <br>Just click on the one of three circles and choose colors for the
+        header, body and footer of your site. You can copy rgb directly to the file with styles.</p>
+    </div>
+
+  </div>
+
+  <div class="siteExample">
+    <div class="page">
+      <div class="header">Header</div>
+      <div class="body">Body</div>
+      <div class="footer">Footer</div>
+    </div>
+  </div>
+  <div class="pickerPannel">
+    <button class="infoBtn" type="button" name="button">About Aquarelle</button>
+    <div class="segments">
+      <div class="colorSegment">
+        <span>Header</span>
+        <div class='color'></div>
+        <div class='show-color info1'></div>
+      </div>
+      <div class="colorSegment">
+        <span>Body</span>
+        <div class='color'></div>
+        <div class='show-color info2'></div>
+      </div>
+      <div class="colorSegment">
+        <span>Footer</span>
+        <div class='color'></div>
+        <div class='show-color info3'></div>
+      </div>
+    </div>
+    <button class="clearBtn" type="button" name="button">Clear</button>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

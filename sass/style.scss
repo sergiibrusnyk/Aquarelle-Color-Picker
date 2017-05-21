@@ -1,0 +1,214 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+$main-color: rgba(255, 255, 255, 0.3);
+$second-color: rgba(0, 0, 0, 0.3);
+$third-color: rgba(0, 0, 0, 0.6);
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(124deg, rgb(183, 242, 174), rgb(182, 196, 219), rgb(211, 226, 181), rgb(232, 225, 127), rgb(237, 196, 217));
+}
+
+.siteExample {
+  width: 50%;
+  height: 100vh;
+  @include flex;
+}
+
+.page {
+  width: 350px;
+  height: 500px;
+  border: 1px solid $second-color;
+  background-color: $main-color;
+}
+
+.header {
+  height: 120px;
+  border-bottom: 1px solid $second-color;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: $third-color;
+  @include flex;
+}
+
+.body {
+  height: 310px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: $third-color;
+  border-bottom: 1px solid $second-color;
+  @include flex;
+}
+
+.footer {
+  height: 68px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: $third-color;
+  @include flex;
+}
+
+.pickerPannel {
+  width: 35%;
+}
+
+.infoBtn {
+  padding: 5px;
+  display: block;
+  margin: 100px auto;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: $main-color;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.infoWindow {
+  display: none;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: $third-color;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.infoWindowText {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  width: 40%;
+  line-height: 1.5;
+
+  p {
+    margin: 30px;
+    font-size: 1.6rem;
+  }
+}
+
+.close-circle {
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $main-color;
+  border-radius: 50%;
+  @include flex;
+}
+
+.close {
+  float: right;
+  font-weight: 500;
+  font-size: 1.6rem;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 1s;
+  }
+}
+
+.segments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30%;
+}
+
+.colorSegment {
+  @include flex;
+  flex-direction: column;
+
+  span {
+    color: $third-color;
+    font-size: 1.6rem;
+  }
+}
+
+.color {
+  width: 120px;
+  height: 120px;
+  border: 1px solid $second-color;
+  border-radius: 50%;
+  background-color: $main-color;
+}
+
+.show-color {
+  width: 130px;
+  height: 30px;
+  border: 1px solid $second-color;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: $third-color;
+  font-size: 1.4rem;
+  font-weight: 200;
+  background-color: $main-color;
+  @include flex;
+}
+
+.clearBtn {
+  display: block;
+  margin: 50px auto;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: $main-color;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .siteExample {
+    width: 100%;
+  }
+
+  .infoBtn {
+    display: none;
+  }
+
+  .pickerPannel {
+    width: 100%;
+  }
+
+  .segments {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .colorSegment {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    span {
+      display: none;
+    }
+  }
+}
